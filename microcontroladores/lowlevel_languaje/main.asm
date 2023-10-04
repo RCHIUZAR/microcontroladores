@@ -23,11 +23,11 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 ;-------------------------------------------------------------------------------
 ; Main loop here
 ;-------------------------------------------------------------------------------
-			bis.b #BIT7, &P4DIR ; Set the P1.0 as output for the LED.
-			bis.b #BIT0, &P1DIR
+	    bis.b #BIT7, &P4DIR ; Set the P1.0 as output for the LED.
+	    bis.b #BIT0, &P1DIR
 loop        bis.b #BIT7, &P4OUT ;
-			bis.b #BIT0, &P1OUT
-			jmp loop
+	    bis.b #BIT0, &P1OUT
+	    jmp loop
                                             
 
 ;-------------------------------------------------------------------------------
